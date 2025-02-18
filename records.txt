@@ -1,0 +1,3 @@
+a b No Counseling Monday Wednesday 
+a b Yes Shelter Tuesday Friday 
+beto facha Yes Counseling Tuesday Friday 

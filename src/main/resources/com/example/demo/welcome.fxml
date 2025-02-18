@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.RadioButton?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo.WelcomeControler"
+      prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="Please enter your credentials" fx:id="lblWelcome"/>
+        <HBox>
+            <Label text="Name" />
+            <TextField fx:id="txtName"  />
+        </HBox>
+        <HBox>
+            <Label text="Password"  />
+            <PasswordField fx:id="txtPassword"/>
+        </HBox>
+
+        <!-- HBox for Gender selection -->
+        <HBox>
+            <Label text="Gender" />
+            <!-- Toggle = allow for only one button to be selected at a time-->
+            <!--used for grouping RadioButtons -->
+            <ToggleGroup fx:id="genderButton">
+                <RadioButton text="Male" fx:id="radioMale"/>
+                <RadioButton text="Female" fx:id="radioFemale"/>
+            </ToggleGroup>
+        </HBox>
+
+        <!-- Login button -->
+        <Button text="Login" fx:id="btnLogin" onAction="#onButtonClick"/>
+    </children>
+</VBox>
