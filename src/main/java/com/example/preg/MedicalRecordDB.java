@@ -45,8 +45,8 @@ public class MedicalRecordDB {
     public List<MedicalRecord> getRecords(String userId) {
         List<MedicalRecord> records = new ArrayList<>();
         String sql = "SELECT * FROM MedicalRecords WHERE userId = ?";
-        try (Connection conn = DriverManager.getConnection(URL);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection connection = DriverManager.getConnection(URL);
+             PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, userId);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
